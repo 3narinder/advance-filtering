@@ -2,7 +2,7 @@ import Categories from "../components/Categories";
 import Colors from "../components/Colors";
 import Price from "../components/Price";
 
-const Sidebar = () => {
+const Sidebar = ({ handleChange }) => {
   return (
     <section className="h-screen border-r border-[#e5e5e5] flex flex-col sticky top-0">
       {/* Sticky Header */}
@@ -12,9 +12,9 @@ const Sidebar = () => {
 
       {/* Scrollable Content */}
       <div className="overflow-y-auto w-full pl-12 my-4 flex-grow">
-        <Categories />
-        <Price />
-        <Colors />
+        <Categories handleChange={handleChange} />
+        <Price handleChange={handleChange} />
+        <Colors handleChange={handleChange} />
       </div>
     </section>
   );

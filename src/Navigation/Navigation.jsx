@@ -1,7 +1,7 @@
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
-const Navigation = () => {
+const Navigation = ({ query, handleInputChange }) => {
   return (
     <nav className="border-b border-[#f3f3f3] px-5 py-5 z-50 sticky top-0 bg-white">
       <div className="flex items-center justify-around">
@@ -10,6 +10,8 @@ const Navigation = () => {
             className="px-5 py-3 border-none outline-none mr-5 relative w-56 bg-[#f7f6f6]"
             type="text"
             placeholder="Enter your search shoes."
+            value={query}
+            onChange={handleInputChange}
           />
         </div>
 
